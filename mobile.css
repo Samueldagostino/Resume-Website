@@ -1,0 +1,340 @@
+﻿/*
+    Applyin border-box to all elements
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+    This is for creating an outline of the whole document
+*/
+
+
+
+html {
+    background-color: white;
+    font-size: 16px;
+    font-family: Montserrat, serif;
+}
+
+
+/*
+    Formatting my image with a border radius as well as a very slim black border
+*/
+
+#profile {
+    box-sizing: border-box;
+    top: 0;
+    width: 20%;
+    height: 10%;
+    border: 2px black solid;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px #eeeeee;
+}
+/*
+    Looking to align my name in the middle as the title of the page
+*/
+#name {
+    text-align: center;
+    text-decoration: 2px black;
+    text-shadow: 2px 2px #ffffff;
+}
+
+/*
+    Removing the underline of the anchor tags and adding a lightblue background color to 
+    appear everytime we hover over an anchor tag.
+*/
+a:hover {
+    background: lightblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+    For the title classes I want to apply a top border for organization
+    and a padding to create some space
+*/
+.title {
+    border-top: 2px black solid;
+    padding-top: 2%;
+    text-shadow: 1px 1px white;
+    margin-bottom: 1.5em;
+}
+
+.job {
+    text-shadow: 1px 1px 1px gray;
+}
+
+/*
+    I want all my H2 elements to have a margin bottom with some space to organize the website
+        - The same applies for my description and spacing class
+        - My description class is only applied to paragraphs (to describe)
+        - My spacing class is adding a margin to my UL
+        - My shortdescription class is editing some shorter paragraphs I wanted to modify.
+*/
+
+h2 {
+    margin-bottom: 4%;
+}
+
+.description {
+    margin-bottom: 4%;
+    margin-left: 4%;
+}
+
+.spacing {
+    margin-bottom: 4%;
+}
+
+.shortdescription {
+    margin-bottom: 3%;
+}
+
+/*
+    This is my id "project"
+    Customizing the anchor attribute with a link, including a hover
+    element as well as a bigger font-size
+*/
+
+#project {
+    font-size: 1.5em;
+}
+
+    #project:hover {
+        background-color: cornflowerblue;
+    }
+
+/*
+    This is my class "project"
+    Customizing the IMG for my projects, making it nice to look at as well as 
+    implementing the hover effect.
+*/
+
+
+
+.thanks {
+    border-top: 2px black solid;
+    padding-top: 2%;
+}
+
+
+/*
+    Styling the buttons at the end of the Form applying a box and formating it.
+*/
+
+.click {
+    border: double white 0.8em;
+    margin-right: 3.5%;
+    margin-top: 0.5em;
+    background-color: black;
+    color: white;
+    width: 10em;
+    line-height: 5em;
+    font-size: 0.55em;
+}
+
+
+/*
+     Positioning my email and phone number to the right side of my page
+ */
+.move {
+    position: relative;
+}
+
+    .move p {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+        .move p #email {
+            margin-left: 5px;
+            color: rgb(85, 26, 139)
+        }
+/*
+    Editing my skills section, trying to make a nice formatted Table
+*/
+
+.skills{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 12em;
+    padding: 0 10em;
+    padding-bottom: 2%;
+}
+
+/*
+    Building my CV Section - Formatting for it to look like the example
+*/
+
+.project-entry {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+    .project-entry .img-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+        .project-entry .img-container img {
+            object-fit: contain;
+            margin-right: 1em;
+        }
+
+.information-container #project {
+    box-sizing: content-box;
+    margin-bottom: 500px
+}
+
+.projects .message-container .short-description {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    text-align: start;
+}
+
+/*
+    Important is to style the input elements in the form section
+    Trying to format it properly with Flexbox
+*/
+
+.form-container{
+    display: flex;
+    width: 100%;
+}
+.contact-form .form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .input-group {
+    display: flex;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.form-container .radio-box{
+    display: block;
+    width: 20rem;
+}
+
+.form-container .label-radio{
+    display: inline;
+}
+
+.form-container input.radio{
+    display: inline;
+    justify-content: flex-end;
+}
+
+.contact-form label input,
+.contact-form textarea,
+.contact-form form select {
+    width: 20rem;
+}
+
+.contact-form textarea {
+    height: 10rem;
+}
+
+/*
+    Display Project Start
+*/
+
+body {
+    padding: 5%;
+    border: double white 10px;
+    outline: #67afb1 solid 100px;
+    background-image: linear-gradient(to right, lightblue, 50%, lightgray);
+    width: 98.5%;
+}
+
+/*
+    For some reason I have to start the max-width at 1000px or else it does not show it on the browser
+    I am pretending like 1000px is the size of the mobile screen, since anything lower will not apply.
+*/
+
+/*
+    I wanted to make sure the font-szie decreased on a smaller screen, 
+*/
+
+@media (max-width: 480px) and (min-width: 0){
+    body {
+        width: 100%;
+        font-size: 0.5em;
+        outline: #67afb1 solid 100px;
+        background-image: linear-gradient(to left, lightblue, 50%, lightgray);
+        width: 98.5%;
+    }
+
+    /*
+        I want my titles to have a bit less spacing when going into mobile size
+    */
+
+    .title {
+        border-top: 1px black solid;
+        padding-top: 2%;
+        text-shadow: 1px 1px white;
+        margin-bottom: 1.5em;
+    }
+
+    .button-element {
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    button:hover {
+        border: 2px white solid;
+        transition: border 0.5s;
+    }
+}
+
+/*
+    Formatting my "Submit" and "Clear" Buttons
+    I just want them to bring out a border when being hovered on.
+*/
+
+.button-element {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+button:hover {
+    border: 2px white solid;
+    transition: border 0.5s;
+}
+
+/*
+    Organining in a better way the the first section
+*/
+/*
+    Use the first section as my name to structure the document
+*/
+.section1 {
+    display: flex;
+    justify-content: center;
+}
+
+ /*
+     Moved my email and phone to the right and grouped them together
+ */
+.move{
+    display: flex;
+    justify-content: flex-end;
+    display: block;
+}
+
+.section2{
+    display: flex;
+    display: block;
+}
+
+.section2 .description{
+    text-indent: 2em;
+}
